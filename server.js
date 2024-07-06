@@ -1,7 +1,4 @@
-const express =require('express')
-const app=express()
-app.get('/',function(req,res){
-    console.log("server has started")
-    res.send("this is my express program")
-})
-app.listen(8085)
+const crypto=require('crypto');
+const hash=crypto.createHash('sha256');
+hash.update('teja2003')
+console.log(hash.digest('hex'));
